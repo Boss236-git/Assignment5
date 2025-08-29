@@ -1,47 +1,26 @@
 
-// let nam = 0;
-// let zero = document.getElementById("love");
-
-// let btn = document.querySelectorAll(".ph")
-
-// btn.forEach(btnR =>{
-
-// btnR.addEventListener("click",function(){
-//     nam++;
-//     zero.innerText = nam  
-// })
-
-// })
 
 
 
 
+let nam = 0;
+let zero = document.getElementById("love");
 
-// let coinM = 100;
-// const coin = document.getElementById("coin")
-// const call = document.querySelectorAll(".call")
+let btn = document.querySelectorAll(".ph")
 
-// call.forEach(sob =>{
-    
-// sob.addEventListener("click", function(){
+btn.forEach(btnR =>{
+
+btnR.addEventListener("click",function(){
+    nam++;
+    zero.innerText = nam  
+})
+
+})
 
 
 
-// if(coinM >=20){
-//     coinM = coinM -20;
-// coin.innerText = coinM
 
-// alert("Calling Police 999....")
-
-// }
-// else{
-//     alert("You don't have enough coins.You need at least 20 coins to make a call")
-// }
-
-// })
-    
-// })
-
+let taka = 100;
  function takeElement(vala){
     const elem  = document.getElementById(vala);
     return elem;
@@ -64,11 +43,29 @@ for( let oneBtn of allBtn){
 </div>`
 
 card.append(newCard)
+
+const message = oneBtn.getAttribute("data-message");
+  const coin = takeElement("coin")
+   if ( taka >= 20){
+    taka = taka - 20
+    coin.innerText=taka
+
+    alert(message);
+   }
+
+   else{
+    alert("You don't have enough coins ")
+   }
+
         
     })
 }
 
 
+document.getElementById("clear-btn").addEventListener("click", function(){
+     const card = takeElement("card-container")
+     card.innerHTML="";
+})
 
 
 

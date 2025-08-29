@@ -1,5 +1,20 @@
 
+let num = 0;
+const copyCount = document.getElementById("copy-count")
+const copyBtn =  document.getElementsByClassName("copy-btn")
+for( let copyOne of copyBtn){
+    copyOne.addEventListener("click",function(){
+        num++;
+        copyCount.innerText=num
+        
 
+        const text = copyOne.value + "999"
+
+  navigator.clipboard.writeText(text);
+
+        alert("It has been copied 999")
+    })
+}
 
 
 
@@ -67,46 +82,6 @@ document.getElementById("clear-btn").addEventListener("click", function(){
      card.innerHTML="";
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//   document.getElementById("btn-call").addEventListener("click",function(){ 
-// const val = takeElement("pc").innerText
-// const vol = takeElement("nam").innerText
-
-    // const card = takeElement("card-container")
-
-
-//     const newCart = document.createElement("div")
-//     newCart.innerHTML = `<div class="p-2 rounded-[8px] mt-8 bg-[#fafafa] shadow-md">
-//  <h2 class="font-semibold text-xl ml-5">Police Contact</h2>
-//  <h3 class="font-semibold  ml-6 text-[#5c5c5c]">999</h3>
-
-// </div>`
-
-
-// card.append(newCart)
-    
-// })
 
 
 
